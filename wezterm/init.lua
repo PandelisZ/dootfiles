@@ -53,7 +53,7 @@ local function choose_project()
 	})
 end
 
-config.color_scheme = "Base4Tone Classic P"
+config.color_scheme = "Mariana"
 
 -- [[  Font  ]]
 config.font = wezterm.font("FiraCode Nerd Font Mono", {
@@ -82,6 +82,7 @@ config.window_padding = {
 	top = "0.25cell",
 	bottom = 0,
 }
+config.scrollback_lines = 100000
 
 -- [[ Cursor ]]
 config.cursor_blink_rate = 800
@@ -92,6 +93,7 @@ config.cursor_blink_ease_out = "Linear"
 config.keys = {
 	-- Text Editing
 	{ key = "Backspace", mods = "CMD", action = act.SendKey({ key = "w", mods = "CTRL" }) },
+	{ key = "]", mods = "LEADER", action = wezterm.action.ActivateCopyMode },
 	-- Window Management
 	{ key = "a", mods = "LEADER|CTRL", action = wezterm.action({ SendString = "\x02" }) },
 	{ key = "-", mods = "LEADER", action = wezterm.action({ SplitVertical = { domain = "CurrentPaneDomain" } }) },
