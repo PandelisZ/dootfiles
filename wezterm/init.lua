@@ -9,20 +9,26 @@ config.color_scheme = "s3r0 modified (terminal.sexy)"
 config.font = wezterm.font("FiraCode Nerd Font Mono", {
 	weight = "Light",
 })
-config.font_size = 14
+config.font_size = 13
 config.freetype_load_target = "Normal"
 config.leader = { key = "a", mods = "CTRL" }
 
 -- [[ UI ]]
 config.hide_tab_bar_if_only_one_tab = true
+config.window_background_opacity = 0.8
+config.macos_window_background_blur = 50
+config.front_end = "WebGpu"
 
 -- [[ Cursor ]]
 config.cursor_blink_rate = 800
 config.cursor_blink_ease_in = "Linear"
 config.cursor_blink_ease_out = "Linear"
 
--- [[ Window Management ]]
+-- [[ Keybinds ]]
 config.keys = {
+	-- Text Editing
+	{ key = "Backspace", mods = "CTRL", action = act.SendKey({ key = "w", mods = "CTRL" }) },
+	-- Window Management
 	{ key = "a", mods = "LEADER|CTRL", action = wezterm.action({ SendString = "\x02" }) },
 	{ key = "-", mods = "LEADER", action = wezterm.action({ SplitVertical = { domain = "CurrentPaneDomain" } }) },
 	{ key = "\\", mods = "LEADER", action = wezterm.action({ SplitHorizontal = { domain = "CurrentPaneDomain" } }) },
