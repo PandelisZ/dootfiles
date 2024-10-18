@@ -3,7 +3,57 @@ local act = wezterm.action
 
 local config = wezterm.config_builder()
 
-config.color_scheme = "s3r0 modified (terminal.sexy)"
+-- The directory that contains all your projects.
+local project_dir = wezterm.home_dir .. "/w"
+
+local function project_dirs()
+	-- Start with your home directory as a project, 'cause you might want
+	-- to jump straight to it sometimes.
+	local projects = { wezterm.home_dir }
+
+	-- WezTerm comes with a glob function! Let's use it to get a lua table
+	-- containing all subdirectories of your project folder.
+	for _, dir in ipairs(wezterm.glob(project_dir .. "/*")) do
+		-- ... and add them to the projects table.
+		table.insert(projects, dir)
+	end
+
+	return projects
+end
+
+local function choose_project()
+	local choices = {}
+	for _, dir in ipairs(project_dirs()) do
+		table.insert(choices, { label = dir })
+	end
+
+	return wezterm.action.InputSelector({
+		title = "Choose Project",
+		choices = choices,
+		fuzzy = true,
+		action = wezterm.action_callback(function(child_window, child_pane, id, label)
+			if not label then
+				return
+			end
+
+			-- The SwitchToWorkspace action will switch us to a workspace if it already exists,
+			-- otherwise it will create it for us.
+			child_window:perform_action(
+				wezterm.action.SwitchToWorkspace({
+					-- We'll give our new workspace a nice name, like the last path segment
+					-- of the directory we're opening up.
+					name = label:match("([^/]+)$"),
+					-- Here's the meat. We'll spawn a new terminal with the current working
+					-- directory set to the directory that was picked.
+					spawn = { cwd = label },
+				}),
+				child_pane
+			)
+		end),
+	})
+end
+
+config.color_scheme = "Base4Tone Classic P"
 
 -- [[  Font  ]]
 config.font = wezterm.font("FiraCode Nerd Font Mono", {
@@ -18,6 +68,7 @@ config.hide_tab_bar_if_only_one_tab = true
 config.window_background_opacity = 0.8
 config.macos_window_background_blur = 50
 config.front_end = "WebGpu"
+config.animation_fps = 60
 config.window_decorations = "RESIZE"
 config.use_fancy_tab_bar = true
 config.tab_bar_at_bottom = false
@@ -81,6 +132,19 @@ config.keys = {
 		key = "RightArrow",
 		mods = "OPT",
 		action = act.SendKey({ key = "f", mods = "ALT" }),
+	},
+	-- Projects
+	{
+		key = "p",
+		mods = "LEADER",
+		-- Present in to our project picker
+		action = choose_project(),
+	},
+	{
+		key = "f",
+		mods = "LEADER",
+		-- Present a list of existing workspaces
+		action = wezterm.action.ShowLauncherArgs({ flags = "FUZZY|WORKSPACES" }),
 	},
 }
 
