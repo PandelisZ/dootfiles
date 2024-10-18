@@ -40,7 +40,7 @@ config.cursor_blink_ease_out = "Linear"
 -- [[ Keybinds ]]
 config.keys = {
 	-- Text Editing
-	{ key = "Backspace", mods = "CTRL", action = act.SendKey({ key = "w", mods = "CTRL" }) },
+	{ key = "Backspace", mods = "CMD", action = act.SendKey({ key = "w", mods = "CTRL" }) },
 	-- Window Management
 	{ key = "a", mods = "LEADER|CTRL", action = wezterm.action({ SendString = "\x02" }) },
 	{ key = "-", mods = "LEADER", action = wezterm.action({ SplitVertical = { domain = "CurrentPaneDomain" } }) },
