@@ -18,6 +18,19 @@ config.hide_tab_bar_if_only_one_tab = true
 config.window_background_opacity = 0.8
 config.macos_window_background_blur = 50
 config.front_end = "WebGpu"
+config.window_decorations = "RESIZE"
+config.use_fancy_tab_bar = true
+config.tab_bar_at_bottom = false
+config.window_frame = {
+	inactive_titlebar_bg = "none",
+	active_titlebar_bg = "none",
+}
+config.window_padding = {
+	left = 0,
+	right = 0,
+	top = "0.25cell",
+	bottom = 0,
+}
 
 -- [[ Cursor ]]
 config.cursor_blink_rate = 800
