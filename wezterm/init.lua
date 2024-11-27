@@ -53,11 +53,11 @@ local function choose_project()
 	})
 end
 
-config.color_scheme = "Mariana"
+config.color_scheme = "Gigavolt (base16)"
 
 -- [[  Font  ]]
 config.font = wezterm.font("FiraCode Nerd Font Mono", {
-	weight = "Light",
+	weight = "Regular",
 })
 config.font_size = 13
 config.freetype_load_target = "Normal"
@@ -65,8 +65,8 @@ config.leader = { key = "a", mods = "CTRL" }
 
 -- [[ UI ]]
 config.hide_tab_bar_if_only_one_tab = true
-config.window_background_opacity = 0.8
-config.macos_window_background_blur = 50
+config.window_background_opacity = 1
+config.macos_window_background_blur = 60
 config.front_end = "WebGpu"
 config.animation_fps = 60
 config.window_decorations = "RESIZE"
