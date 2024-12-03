@@ -137,6 +137,9 @@ alt-y = 'workspace Y'
 alt-z = 'workspace Z'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
+alt-shift-1 = 'move-node-to-workspace 1'
+alt-shift-2 = 'move-node-to-workspace 2'
+alt-shift-3 = 'move-node-to-workspace 3'
 alt-shift-a = 'move-node-to-workspace A'
 alt-shift-b = 'move-node-to-workspace B'
 alt-shift-c = 'move-node-to-workspace C'
@@ -160,16 +163,6 @@ alt-shift-x = 'move-node-to-workspace X'
 alt-shift-y = 'move-node-to-workspace Y'
 alt-shift-z = 'move-node-to-workspace Z'
 
-# Force worksapces to monitor
-[workspace-to-monitor-force-assignment]
-Q = 'DELL U4021QW'
-W = 'DELL U4021QW'
-E = 'DELL U4021QW'
-R = 'DELL U4021QW'
-1 = ['built-in', 'secondary', 'G27q-30']
-2 = ['built-in', 'secondary', 'G27q-30']
-3 = ['built-in', 'secondary', 'G27q-30']
-
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
 alt-tab = 'workspace-back-and-forth'
@@ -178,6 +171,16 @@ alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#mode
 alt-shift-semicolon = 'mode service'
+
+# Force worksapces to monitor
+[workspace-to-monitor-force-assignment]
+Q = ['main', 'dell.*']
+W = ['main', 'dell.*']
+E = ['main', 'dell.*']
+R = ['main', 'dell.*']
+1 = ['built-in', 'secondary', 'G27q-30']
+2 = ['built-in', 'secondary', 'G27q-30']
+3 = ['built-in', 'secondary', 'G27q-30']
 
 # 'service' binding mode declaration.
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
