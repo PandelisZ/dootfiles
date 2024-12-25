@@ -109,14 +109,14 @@ alt-shift-k = 'move up'
 alt-shift-l = 'move right'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#resize
-alt-shift-minus = 'resize smart -50'
-alt-shift-equal = 'resize smart +50'
+alt-shift-minus = 'resize smart -150'
+alt-shift-equal = 'resize smart +150'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
 alt-q = 'workspace Q'
 alt-a = 'workspace A'
 alt-b = 'workspace B'
-alt-c = 'workspace C'
+# C reserved for chat jipity
 alt-d = 'workspace D'
 alt-e = 'workspace E'
 alt-f = 'workspace F'
@@ -142,7 +142,6 @@ alt-shift-2 = 'move-node-to-workspace 2'
 alt-shift-3 = 'move-node-to-workspace 3'
 alt-shift-a = 'move-node-to-workspace A'
 alt-shift-b = 'move-node-to-workspace B'
-alt-shift-c = 'move-node-to-workspace C'
 alt-shift-d = 'move-node-to-workspace D'
 alt-shift-e = 'move-node-to-workspace E'
 alt-shift-f = 'move-node-to-workspace F'
