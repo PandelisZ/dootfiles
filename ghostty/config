@@ -1,4 +1,4 @@
-ont-family = TX-02
+font-family = TX-02
 font-size = 19
 font-thicken = true
 theme = light:xcodelighthc,dark:xcodedarkhc
