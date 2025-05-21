@@ -1,7 +1,14 @@
-font-family = TX-02
+
+#custom-shader = ../../w/dootfiles/ghostty/shaders/retro-terminal.glsl
+#custom-shader = ../../w/dootfiles/ghostty/shaders/tft.glsl
+#custom-shader = ../../w/dootfiles/ghostty/shaders/synthwave.glsl
+
+keybind = unconsumed:super+shift+p=reload_config
+
+font-family = Typestar 
 font-size = 19
 font-thicken = true
-theme = light:xcodelighthc,dark:xcodedarkhc
+theme = light:xcodedarkhc,dark:xcodedarkhc
 quick-terminal-animation-duration = 0
 keybind = global:super+grave_accent=toggle_quick_terminal
 cursor-style = block
