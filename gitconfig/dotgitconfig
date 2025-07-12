@@ -6,6 +6,7 @@
 	excludesfile = ~/w/dootfiles/gitconfig/gitignore
   pager = delta
 	autocrlf = false
+  editor = nvim
 [pull]
 	rebase = true
 [rebase]
