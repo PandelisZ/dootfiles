@@ -15,3 +15,4 @@ ln -sf $(pwd)/ghostty/config $HOME/.config/ghostty/config
 ln -sf $(pwd)/nvim $HOME/.config/nvim
 ln -sf $(pwd)/tmux/tmux.conf $HOME/.tmux.conf
 ln -sf $(pwd)/gitconfig/dotgitconfig $HOME/.gitconfig
+ln -sf $(pwd)/hypr $HOME/.config/hypr
