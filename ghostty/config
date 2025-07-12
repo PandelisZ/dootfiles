@@ -6,7 +6,7 @@
 keybind = unconsumed:super+shift+p=reload_config
 
 font-family = Typestar 
-font-size = 19
+font-size = 12
 font-thicken = true
 theme = light:xcodedarkhc,dark:xcodedarkhc
 quick-terminal-animation-duration = 0
@@ -25,3 +25,4 @@ macos-icon = custom-style
 macos-icon-frame = plastic
 macos-icon-ghost-color = FFFFFF
 macos-icon-screen-color = 000000
+shell-integration = fish

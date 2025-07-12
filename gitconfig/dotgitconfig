@@ -21,7 +21,7 @@
 	textconv = bun
 	binary = true
 [gpg]
-	program = /usr/local/bin/gpg
+	program = gpg
 	format = openpgp
 [push]
 	autoSetupRemote = true
