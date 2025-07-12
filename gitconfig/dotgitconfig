@@ -1,0 +1,31 @@
+[user]
+	name = Pandelis Zembashis
+	email = p@ndel.is
+	signingkey = 1A19696C8E36DD255436C9258F74F81E4A18C01A
+[core]
+	excludesfile = ~/w/dootfiles/gitconfig/gitignore
+  pager = delta
+	autocrlf = false
+[pull]
+	rebase = true
+[rebase]
+  autoStash = true
+[alias]
+	ll = log --oneline --graph --decorate --all
+	oops = commit --amend
+[init]
+	defaultBranch = master
+[commit]
+	gpgsign = true
+[diff "lockb"]
+	textconv = bun
+	binary = true
+[gpg]
+	program = /usr/local/bin/gpg
+	format = openpgp
+[push]
+	autoSetupRemote = true
+[rerere]
+	enabled = true
+[color "decorate"]
+	branch = magenta
