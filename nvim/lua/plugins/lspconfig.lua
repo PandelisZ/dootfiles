@@ -1,4 +1,5 @@
 return {
+  { "qvalentin/helm-ls.nvim", ft = "helm" },
   {
     "neovim/nvim-lspconfig",
     opts = {
