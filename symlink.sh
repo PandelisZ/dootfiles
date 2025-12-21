@@ -17,6 +17,7 @@ ln -sf $(pwd)/gitconfig/dotgitconfig $HOME/.gitconfig
 # check if on linux and if so symlink the hypr config
 if [ "$(uname)" == "Linux" ]; then
   ln -sf $(pwd)/hypr $HOME/.config/hypr
+  ln -sf $(pwd)/waybar $HOME/.config/waybar
 fi
 
 if [ "$(uname)" == "Darwin" ]; then
