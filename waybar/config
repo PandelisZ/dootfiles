@@ -1,0 +1,79 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 32,
+  "margin-top": 0,
+  "margin-left": 0,
+  "margin-right": 0,
+
+  "modules-left": [
+    "workspaces",
+    "window"
+  ],
+
+  "modules-center": [
+  ],
+
+  "modules-right": [
+    "network",
+    "pulseaudio",
+    "cpu",
+    "memory",
+    "tray",
+    "clock"
+  ],
+
+  "hyprland/workspaces": {
+    "format": "{name}",
+    "on-click": "hyprctl dispatch workspace {name}"
+  },
+
+  "window": {
+    "max-length": 80
+  },
+
+  "network": {
+    "format-wifi": " {essid} {signalStrength}%",
+    "format-ethernet": "󰈁 {ifname}",
+    "format-disconnected": "󰖪",
+    "tooltip-format": "{ifname} via {gwaddr}\n{ipaddr}/{cidr}"
+  },
+
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "",
+    "format-icons": {
+      "default": [
+        "",
+        "",
+        ""
+      ]
+    },
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+  },
+
+  "cpu": {
+    "interval": 2,
+    "format": " {usage}%",
+    "format-alt": " {avg_frequency}GHz",
+    "tooltip": true,
+    "tooltip-format": "CPU: {usage}%\nLoad: {load}\nTemp: {temperature}°C",
+    "on-click": "ghostty -e htop"
+  },
+
+  "memory": {
+    "interval": 5,
+    "format": " {used:0.1f}G",
+    "tooltip-format": "Memory: {used:0.1f}G / {total:0.1f}G ({percentage}%)"
+  },
+
+  "tray": {
+    "icon-size": 18,
+    "spacing": 8
+  },
+
+  "clock": {
+    "format": "{:%H:%M}",
+    "tooltip-format": "{:%Y-%m-%d %H:%M}"
+  }
+}
