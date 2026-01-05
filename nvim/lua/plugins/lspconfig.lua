@@ -19,16 +19,11 @@ return {
         prettier = function()
           return false
         end,
-        eslint = function()
-          --[[
-          require("lazyvim.util").lsp.on_attach(function(client)
-            if client.name == "eslint" then
-              client.server_capabilities.documentFormattingProvider = true
-            elseif client.name == "tsserver" then
-              client.server_capabilities.documentFormattingProvider = false
-            end
+        vtsls = function()
+          Snacks.util.lsp.on({ name = "vtsls" }, function(_, client)
+            client.server_capabilities.documentFormattingProvider = false
+            client.server_capabilities.documentRangeFormattingProvider = false
           end)
-          --]]
         end,
       },
     },

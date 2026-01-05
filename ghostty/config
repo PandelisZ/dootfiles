@@ -26,3 +26,4 @@ macos-icon-frame = plastic
 macos-icon-ghost-color = FFFFFF
 macos-icon-screen-color = 000000
 shell-integration = fish
+keybind = shift+enter=text:\x1b\r
