@@ -3,7 +3,7 @@
 	email = p@ndel.is
 	signingkey = 1A19696C8E36DD255436C9258F74F81E4A18C01A
 [core]
-	excludesfile = ~/w/dootfiles/gitconfig/gitignore
+	excludesfile = ~/.gitignore
   pager = delta
 	autocrlf = false
   editor = nvim
